@@ -1,0 +1,23 @@
+{
+  "name": "mastermind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmritK2/mastermind.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmritK2/mastermind/issues"
+  },
+  "homepage": "https://github.com/AmritK2/mastermind#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}
