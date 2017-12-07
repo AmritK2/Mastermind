@@ -1,9 +1,9 @@
 //var game = {"Red, Blue, Green, Orange, Purple, Yellow"};
 
-function mastermind(guessedColours){
-    var mastermindSelectedColours ="Red, Orange, Yellow, Orange";
+var checkGuess = function mastermind(guessedColours){
+    var mastermindSelectedColours ="Red, Orange, Yellow, Yellow";
     var result = new RegExp(guessedColours); // matching
     var output = result.test(mastermindSelectedColours);
     return output;
 };
-exports.output;
+module.exports.checkGuess = checkGuess;
