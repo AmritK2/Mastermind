@@ -3,7 +3,14 @@ var mastermind = require("./Mastermind");
 
 describe("RandomlySelectedColourShould", function() {
     it("return true", function() {
-        var guessedColours = "Red, Orange, Yellow, Yellow";
+        var guessedColours = ["Red", "Orange", "Yellow", "Yellow"];
         expect(true).to.equal(mastermind.checkGuess(guessedColours));
     });
 });
+
+/*
+describe ("CheckingTheArrayShouldReturnBlack", function (){
+    it("return true", function(){
+       var gussedColours =
+    });
+});*/
