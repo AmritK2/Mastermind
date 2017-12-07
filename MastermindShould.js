@@ -8,9 +8,10 @@ describe("RandomlySelectedColourShould", function() {
     });
 });
 
-/*
-describe ("CheckingTheArrayShouldReturnBlack", function (){
+
+describe ("ShouldReturnBlackAndWhite", function (){
     it("return true", function(){
-       var gussedColours =
+       var guessedColours = ["Red", "Orange", "Blue", "Green"];
+       expect("Black" +" " + "White" + " " + "White").to.equal(mastermind.returnedArray(guessedColours));
     });
-});*/
+});
