@@ -46,7 +46,7 @@ var returnWin = function mastermind(guessedColours){
 };
 module.exports.returnWin = returnWin;
 
-var returnInvalid = function mastermind(guessedColours){
+var returnInvalidColourArray = function mastermind(guessedColours){
 
     var result = [""];
     var validColours = ["Red", "Blue", "Green", "Yellow", "Orange", "Purple"];
@@ -60,4 +60,28 @@ var returnInvalid = function mastermind(guessedColours){
     }
     return result;
 };
-module.exports.returnInvalid = returnInvalid;
+module.exports.returnInvalidColourArray = returnInvalidColourArray;
+
+var returnInvalidArrayLength = function mastermind(guessedColours){
+
+    var result = [""];
+    /*
+    var count = 0;
+    for (var i = 0; i < guessedColours.length; i++)
+    {
+        count++;
+    }
+    if (count === 4)
+    {
+        result = "Error: You must pass 4 colours.";
+    }
+    return result;
+   */
+    if (guessedColours.length === 4)
+    {
+        result = "Error: You must pass 4 colours.";
+    }
+    return result;
+
+};
+module.exports.returnInvalidArrayLength = returnInvalidArrayLength;

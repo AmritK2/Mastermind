@@ -23,9 +23,16 @@ describe ("ShouldReturnWON", function (){
     });
 });
 
-describe ("ShouldReturnInvalid", function (){
+describe ("ShouldReturnInvalidColours", function (){
     it("return true", function(){
         var guessedColours = ["Red", "Blue", "Pink", "Yellow"];
-        expect("Error: You have given an invalid colour.").to.equal(mastermind.returnInvalid(guessedColours));
+        expect("Error: You have given an invalid colour.").to.equal(mastermind.returnInvalidColourArray(guessedColours));
+    });
+});
+
+describe ("ShouldReturnInvalidArrayLength", function (){
+    it("return true", function(){
+        var guessedColours = ["Red", "Blue", "Orange", "Yellow"];
+        expect("Error: You must pass 4 colours.").to.equal(mastermind.returnInvalidArrayLength(guessedColours));
     });
 });
