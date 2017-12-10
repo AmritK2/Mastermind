@@ -1,5 +1,3 @@
-//var game = {"Red, Blue, Green, Orange, Purple, Yellow"};
-
 var checkGuess = function mastermind(guessedColours){
     var mastermindSelectedColours = ["Red", "Orange", "Yellow", "Yellow"];
     var result = new RegExp(guessedColours); // matching
@@ -65,19 +63,7 @@ module.exports.returnInvalidColourArray = returnInvalidColourArray;
 var returnInvalidArrayLength = function mastermind(guessedColours){
 
     var result = [""];
-    /*
-    var count = 0;
-    for (var i = 0; i < guessedColours.length; i++)
-    {
-        count++;
-    }
-    if (count === 4)
-    {
-        result = "Error: You must pass 4 colours.";
-    }
-    return result;
-   */
-    if (guessedColours.length === 4)
+   if (guessedColours.length === 4)
     {
         result = "Error: You must pass 4 colours.";
     }

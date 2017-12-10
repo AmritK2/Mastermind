@@ -1,7 +1,7 @@
 var expect = require('chai').expect; // gives access to files
 var mastermind = require("./Mastermind");
 
-describe("RandomlySelectedColourShould", function() {
+describe("ShouldCheckGuessedColours", function() {
     it("return true", function() {
         var guessedColours = ["Red", "Orange", "Yellow", "Yellow"];
         expect(true).to.equal(mastermind.checkGuess(guessedColours));
@@ -9,7 +9,7 @@ describe("RandomlySelectedColourShould", function() {
 });
 
 
-describe ("ShouldReturnBlackAndWhite", function (){
+describe ("ShouldReturnBlackAndWhiteColours", function (){
     it("return true", function(){
        var guessedColours = ["Red", "Orange", "Blue", "Green"];
        expect("Black" +" " + "White" + " " + "White").to.equal(mastermind.returnedArray(guessedColours));
