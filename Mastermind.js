@@ -19,7 +19,7 @@ var returnedArray = function mastermind(guessedColours){
         for (var j = 0; j < mastermindSelectedColours.length; j++)
         {
             if (guessedColours[i] === mastermindSelectedColours[j])
-{
+            {
                 if (i === j)
                 {
                     result += "Black";
@@ -45,3 +45,19 @@ var returnWin = function mastermind(guessedColours){
     return result;
 };
 module.exports.returnWin = returnWin;
+
+var returnInvalid = function mastermind(guessedColours){
+
+    var result = [""];
+    var validColours = ["Red", "Blue", "Green", "Yellow", "Orange", "Purple"];
+
+    for (var i = 0; i < guessedColours.length; i++) {
+        for (var j = 0; j < validColours.length; j++) {
+            if (guessedColours[i] !== validColours[j]) {
+                result = "Error: You have given an invalid colour.";
+            }
+        }
+    }
+    return result;
+};
+module.exports.returnInvalid = returnInvalid;

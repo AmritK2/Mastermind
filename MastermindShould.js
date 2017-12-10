@@ -22,3 +22,10 @@ describe ("ShouldReturnWON", function (){
         expect("WON").to.equal(mastermind.returnWin(guessedColours));
     });
 });
+
+describe ("ShouldReturnInvalid", function (){
+    it("return true", function(){
+        var guessedColours = ["Red", "Blue", "Pink", "Yellow"];
+        expect("Error: You have given an invalid colour.").to.equal(mastermind.returnInvalid(guessedColours));
+    });
+});
