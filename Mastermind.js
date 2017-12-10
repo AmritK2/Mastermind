@@ -63,7 +63,7 @@ module.exports.returnInvalidColourArray = returnInvalidColourArray;
 var returnInvalidArrayLength = function mastermind(guessedColours){
 
     var result = [""];
-   if (guessedColours.length === 4)
+    if (guessedColours.length !== 4)
     {
         result = "Error: You must pass 4 colours.";
     }

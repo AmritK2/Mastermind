@@ -32,7 +32,7 @@ describe ("ShouldReturnInvalidColours", function (){
 
 describe ("ShouldReturnInvalidArrayLength", function (){
     it("return true", function(){
-        var guessedColours = ["Red", "Blue", "Orange", "Yellow"];
+        var guessedColours = ["Red", "Blue", "Orange", "Yellow", "Yellow"];
         expect("Error: You must pass 4 colours.").to.equal(mastermind.returnInvalidArrayLength(guessedColours));
     });
 });
