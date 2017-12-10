@@ -15,3 +15,10 @@ describe ("ShouldReturnBlackAndWhite", function (){
        expect("Black" +" " + "White" + " " + "White").to.equal(mastermind.returnedArray(guessedColours));
     });
 });
+
+describe ("ShouldReturnWON", function (){
+    it("return true", function(){
+        var guessedColours = ["Red", "Blue", "Orange", "Yellow"];
+        expect("WON").to.equal(mastermind.returnWin(guessedColours));
+    });
+});

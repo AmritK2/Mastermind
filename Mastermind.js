@@ -32,3 +32,16 @@ var returnedArray = function mastermind(guessedColours){
     return result;
 };
 module.exports.returnedArray = returnedArray;
+
+var returnWin = function mastermind(guessedColours){
+
+    var result = [""];
+    var mastermindSelectedColours = ["Red", "Blue", "Orange","Yellow"];
+
+    if (guessedColours.length == mastermindSelectedColours.length)
+    {
+        result = "WON";
+    }
+    return result;
+};
+module.exports.returnWin = returnWin;
