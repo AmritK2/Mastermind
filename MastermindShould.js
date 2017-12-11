@@ -36,3 +36,15 @@ describe ("ShouldReturnInvalidArrayLength", function (){
         expect("Error: You must pass 4 colours.").to.equal(mastermind.returnInvalidArrayLength(guessedColours));
     });
 });
+
+describe ("ShouldReturnExceededAttempts", function (){
+    it("return true", function(){
+        var num = 0;
+        while (num <= 60)
+        {
+            var guessedColours = ["Red", "Blue", "Orange", "Yellow"];
+            num++;
+        }
+        expect("Error: You have had more than 60 tries.").to.equal(mastermind.returnExceededAttempt(guessedColours));
+    });
+});

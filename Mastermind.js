@@ -71,3 +71,12 @@ var returnInvalidArrayLength = function mastermind(guessedColours){
 
 };
 module.exports.returnInvalidArrayLength = returnInvalidArrayLength;
+
+var returnExceededAttempt = function mastermind(guessedColours){
+
+    var result = [""];
+    result = "Error: You have had more than 60 tries.";
+    return result;
+
+};
+module.exports.returnExceededAttempt = returnExceededAttempt;
