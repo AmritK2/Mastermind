@@ -1,13 +1,11 @@
-var checkGuess = function mastermind(guessedColours){
+module.exports.checkGuess = function mastermind(guessedColours){
     var mastermindSelectedColours = ["Red", "Orange", "Yellow", "Yellow"];
     var result = new RegExp(guessedColours); // matching
     var output = result.test(mastermindSelectedColours);
     return output;
 };
-module.exports.checkGuess = checkGuess;
 
-
-var returnedArray = function mastermind(guessedColours){
+module.exports.returnedArray = function mastermind(guessedColours){
 
     var result = [""];
     var mastermindSelectedColours = ["Red", "Blue", "Orange","Yellow"];
@@ -29,9 +27,9 @@ var returnedArray = function mastermind(guessedColours){
     }
     return result;
 };
-module.exports.returnedArray = returnedArray;
 
-var returnWin = function mastermind(guessedColours){
+
+module.exports.returnWin = function mastermind(guessedColours){
 
     var result = [""];
     var mastermindSelectedColours = ["Red", "Blue", "Orange","Yellow"];
@@ -42,9 +40,8 @@ var returnWin = function mastermind(guessedColours){
     }
     return result;
 };
-module.exports.returnWin = returnWin;
 
-var returnInvalidColourArray = function mastermind(guessedColours){
+module.exports.returnInvalidColourArray = function mastermind(guessedColours){
 
     var result = [""];
     var validColours = ["Red", "Blue", "Green", "Yellow", "Orange", "Purple"];
@@ -58,9 +55,8 @@ var returnInvalidColourArray = function mastermind(guessedColours){
     }
     return result;
 };
-module.exports.returnInvalidColourArray = returnInvalidColourArray;
 
-var returnInvalidArrayLength = function mastermind(guessedColours){
+module.exports.returnInvalidArrayLength = function mastermind(guessedColours){
 
     var result = [""];
     if (guessedColours.length !== 4)
@@ -70,13 +66,11 @@ var returnInvalidArrayLength = function mastermind(guessedColours){
     return result;
 
 };
-module.exports.returnInvalidArrayLength = returnInvalidArrayLength;
 
-var returnExceededAttempt = function mastermind(guessedColours){
+module.exports.returnExceededAttempt = function mastermind(guessedColours){
 
-    var result = [""];
-    result = "Error: You have had more than 60 tries.";
+
+    var result = "Error: You have had more than 60 tries.";
     return result;
 
 };
-module.exports.returnExceededAttempt = returnExceededAttempt;
