@@ -7,14 +7,12 @@ module.exports.returnInvalidColourArray = function mastermind(guessedColours){
         for (var j = 0; j < validColours.length; j++) {
             if (guessedColours[i] !== validColours[j]) {
                 result = "Error: You have given an invalid colour.";
-
+                return result;
             }
             // var bool = true;
             // return bool;
         }
-
     }
-    return result;
 };
 
 module.exports.returnInvalidArrayLength = function mastermind(guessedColours){
@@ -23,11 +21,11 @@ module.exports.returnInvalidArrayLength = function mastermind(guessedColours){
     if (guessedColours.length !== 4)
     {
         result = "Error: You must pass 4 colours.";
+        return result;
     }
     // else
     // {
     //     var bool = true;
+    //     return bool;
     // }
-    // return bool;
-    return result;
 };

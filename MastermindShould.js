@@ -2,11 +2,11 @@ var expect = require('chai').expect; // gives access to files
 var mastermind = require("./Mastermind");
 var Invalid = require("./InvalidConditions")
 
-describe("ShouldCheckGuessedColours", function() {
+describe("ShouldReturnWon", function() {
     it("return true", function() {
         var mastermindSelectedColours = ["Red", "Orange", "Yellow", "Yellow"];
         var guessedColours = ["Red", "Orange", "Yellow", "Yellow"];
-        expect(true).to.equal(mastermind.checkGuess(guessedColours, mastermindSelectedColours));
+        expect("Won!").to.equal(mastermind.checkGuess(guessedColours, mastermindSelectedColours));
     });
 });
 
@@ -19,13 +19,6 @@ describe ("ShouldReturnBlackAndWhiteColours", function (){
     });
 });
 
-describe ("ShouldReturnWON", function (){
-    it("return true", function(){
-        var mastermindSelectedColours = ["Red", "Blue", "Orange","Yellow"];
-        var guessedColours = ["Red", "Blue", "Orange", "Yellow"];
-        expect("WON").to.equal(mastermind.returnWin(guessedColours, mastermindSelectedColours));
-    });
-});
 
 describe ("ShouldReturnInvalidColours", function (){
     it("return true", function(){
