@@ -1,6 +1,7 @@
 var expect = require('chai').expect; // gives access to files
-var mastermind = require("./Mastermind");
-var Invalid = require("./InvalidConditions")
+var mastermind = require("./MasterLogic");
+var Invalid = require("./InvalidConditions");
+var actualGame = require("./MastermindGame");
 
 describe("ShouldReturnWon", function() {
     it("return true", function() {
@@ -15,7 +16,8 @@ describe ("ShouldReturnBlackAndWhiteColours", function (){
     it("return true", function(){
         var mastermindSelectedColours = ["Red", "Blue", "Orange","Yellow"];
        var guessedColours = ["Red", "Orange", "Blue", "Green"];
-       expect("Black" +" " + "White" + " " + "White").to.equal(mastermind.returnedArray(guessedColours, mastermindSelectedColours));
+       expect("Black" +" " + "White" + " " + "White").to.equal
+       (mastermind.returnedArray(guessedColours, mastermindSelectedColours));
     });
 });
 
@@ -23,7 +25,9 @@ describe ("ShouldReturnBlackAndWhiteColours", function (){
 describe ("ShouldReturnInvalidColours", function (){
     it("return true", function(){
         var guessedColours = ["Red", "Blue", "Pink", "Yellow"];
-        expect("Error: You have given an invalid colour.").to.equal(Invalid.returnInvalidColourArray(guessedColours));
+        var validColours = ["Red", "Blue", "Green", "Yellow", "Orange", "Purple"];
+        expect("Error: You have given an invalid colour.").to.equal
+        (Invalid.returnInvalidColourArray(guessedColours, validColours));
     });
 });
 
@@ -43,6 +47,15 @@ describe ("ShouldReturnExceededAttempts", function (){
             var guessedColours = ["Red", "Blue", "Orange", "Yellow"];
             num++;
         }
-        expect("Error: You have had more than 60 tries.").to.equal(mastermind.returnExceededAttempt(guessedColours));
+        expect("Error: You have had more than 60 tries.").to.equal
+        (mastermind.returnExceededAttempt(guessedColours));
+    });
+});
+
+describe ("ShouldReturnWonFromCombinedFunctionality", function (){
+    it("return true", function() {
+        var mastermindSelectedColours = ["Red", "Orange", "Yellow", "Yellow"];
+        var guessedColours = ["Red", "Orange", "Yellow", "Yellow"];
+        expect("Won!").to.equal(actualGame.resultedOutput(guessedColours, mastermindSelectedColours));
     });
 });

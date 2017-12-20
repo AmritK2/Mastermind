@@ -1,4 +1,3 @@
-var checkValidity = require("./InvalidConditions")
 
 module.exports.checkGuess = function mastermind(guessedColours, mastermindSelectedColours){
 
@@ -34,20 +33,6 @@ module.exports.returnedArray = function mastermind(guessedColours,mastermindSele
 
 module.exports.returnExceededAttempt = function mastermind(guessedColours){
 
-    var result = "Error: You have had more than 60 tries.";
-    return result;
-
+    return "Error: You have had more than 60 tries.";
 };
 
-//
-// var resultedOutput = function mastermind(guessedColours, mastermindSelectedColours){
-//     if (checkValidity.returnInvalidArrayLength(guessedColours) === true)
-//     {
-//         if (checkValidity.returnInvalidColourArray(guessedColours) === true)
-//         {
-//
-//         }
-//     }
-//
-//
-// }
