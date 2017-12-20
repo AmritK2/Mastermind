@@ -4,23 +4,26 @@ var Invalid = require("./InvalidConditions")
 
 describe("ShouldCheckGuessedColours", function() {
     it("return true", function() {
+        var mastermindSelectedColours = ["Red", "Orange", "Yellow", "Yellow"];
         var guessedColours = ["Red", "Orange", "Yellow", "Yellow"];
-        expect(true).to.equal(mastermind.checkGuess(guessedColours));
+        expect(true).to.equal(mastermind.checkGuess(guessedColours, mastermindSelectedColours));
     });
 });
 
 
 describe ("ShouldReturnBlackAndWhiteColours", function (){
     it("return true", function(){
+        var mastermindSelectedColours = ["Red", "Blue", "Orange","Yellow"];
        var guessedColours = ["Red", "Orange", "Blue", "Green"];
-       expect("Black" +" " + "White" + " " + "White").to.equal(mastermind.returnedArray(guessedColours));
+       expect("Black" +" " + "White" + " " + "White").to.equal(mastermind.returnedArray(guessedColours, mastermindSelectedColours));
     });
 });
 
 describe ("ShouldReturnWON", function (){
     it("return true", function(){
+        var mastermindSelectedColours = ["Red", "Blue", "Orange","Yellow"];
         var guessedColours = ["Red", "Blue", "Orange", "Yellow"];
-        expect("WON").to.equal(mastermind.returnWin(guessedColours));
+        expect("WON").to.equal(mastermind.returnWin(guessedColours, mastermindSelectedColours));
     });
 });
 
